@@ -34,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
         displayPrice(quantity * 5);
     }
 
+    public void increment(View view) {
+        int quantity = 3;
+        display(quantity);
+    }
+
+    public void decrement(View view) {
+        int quantity = 1;
+        display(quantity);
+    }
+
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -49,5 +59,4 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
-
 }
